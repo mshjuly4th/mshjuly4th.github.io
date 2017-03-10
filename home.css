@@ -3,14 +3,13 @@
 	height: 10%;
 	width: 100%;
 	position: fixed;
-	background-color: rgba(1,153,171, 0.5);
+	background-color: rgba(1,153,171, 1);
 	top: 0px;
 	right: 0px;
 	left: 0px;
 }
 #topbar * {
 	height: 100%;
-	position: absolute;
 }
 #pagestretch {
 	height: 3000px;
@@ -23,7 +22,7 @@
 	left: 0px;
 	bottom: 0px;
 }
-:not(#topbar), :not(.background) {
+/*:not(#topbar), :not(.background) {
 	position: fixed;
 	top: 10%;
-}
+}*/
