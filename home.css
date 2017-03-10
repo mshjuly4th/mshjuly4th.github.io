@@ -1,0 +1,29 @@
+#topbar {
+	z-index: 1;
+	height: 10%;
+	width: 100%;
+	position: fixed;
+	background-color: rgba(1,153,171, 0.5);
+	top: 0px;
+	right: 0px;
+	left: 0px;
+}
+#topbar * {
+	height: 100%;
+	position: absolute;
+}
+#pagestretch {
+	height: 3000px;
+	width: 100%;
+	background: #05C900;
+	background: linear-gradient(-30deg, #000000, #00A198);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+}
+:not(#topbar), :not(.background) {
+	position: fixed;
+	top: 10%;
+}
