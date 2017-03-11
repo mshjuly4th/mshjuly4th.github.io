@@ -22,7 +22,7 @@
 	left: 0px;
 	bottom: 0px;
 }
-/*:not(#topbar), :not(.background) {
+body > :not(#topbar) {
 	position: fixed;
 	top: 10%;
-}*/
+}
