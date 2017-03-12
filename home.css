@@ -12,21 +12,32 @@
 	float: left;
 	height: 100%;
 }
-.navitem {
-	background-color: #E0162B;
+#logo-container {
+	
+}
+.navlink,#logo {
+	height: 100%;
 	overflow: hidden;
+}
+.navlink {
+	background-color: #E0162B;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-align-items: center;
 	align-items: center;
-	padding: 0 1%;
+	white-space: nowrap;
 	font-family: Poppins, Lato, Arial;
-	font-weight: normal;
+	color: inherit;
+	text-decoration: inherit;
+	border-bottom: black solid 2px;
 }
-:not(.navitem) {
+.navlink:not(#logo-container) {
+	padding: 0 1%;
+}
+:not(.navlink) {
 	font-family: "Open Sans", Roboto, Arial;
 }
-.navitem:hover {
+.navlink:hover {
 	background-color: #E05463;
 }
 #pagestretch {
