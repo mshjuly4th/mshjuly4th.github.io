@@ -20,11 +20,11 @@
 	-webkit-align-items: center;
 	align-items: center;
 	padding: 0 1%;
-	font-family: "Open Sans", Roboto, Arial;
-	font-weight: bold;
+	font-family: Poppins, Lato, Arial;
+	font-weight: normal;
 }
 :not(.navitem) {
-	font-family: Poppins, Lato, Arial;
+	font-family: "Open Sans", Roboto, Arial;
 }
 .navitem:hover {
 	background-color: #E05463;
@@ -33,7 +33,7 @@
 	height: 3000px;
 	width: 100%;
 	background: #05C900;
-	background: linear-gradient(-30deg, #000000, #0052A5);
+	background: linear-gradient(-30deg, black, white);
 	position: absolute;
 	top: 0px;
 	right: 0px;
