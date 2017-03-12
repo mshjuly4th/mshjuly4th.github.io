@@ -1,28 +1,46 @@
-#topbar {
+#navbar {
 	z-index: 1;
 	height: 10%;
 	width: 100%;
 	position: fixed;
-	background-color: rgba(1,153,171, 1);
+	background-color: #E0162B;
 	top: 0px;
 	right: 0px;
 	left: 0px;
 }
-#topbar * {
+#navbar > * {
+	float: left;
 	height: 100%;
+}
+.navitem {
+	background-color: #E0162B;
+	overflow: hidden;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	padding: 0 1%;
+	font-family: "Open Sans", Roboto, Arial;
+	font-weight: bold;
+}
+:not(.navitem) {
+	font-family: Poppins, Lato, Arial;
+}
+.navitem:hover {
+	background-color: #E05463;
 }
 #pagestretch {
 	height: 3000px;
 	width: 100%;
 	background: #05C900;
-	background: linear-gradient(-30deg, #000000, #00A198);
+	background: linear-gradient(-30deg, #000000, #0052A5);
 	position: absolute;
 	top: 0px;
 	right: 0px;
 	left: 0px;
 	bottom: 0px;
 }
-body > :not(#topbar) {
-	position: fixed;
+body > :not(#navbar) {
+	position: absolute;
 	top: 10%;
 }
