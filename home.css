@@ -2,7 +2,7 @@
 	/*clear: both;*/
 	z-index: 1;
 	height: 10%;
-	min-height: 40px;
+	min-height: 50px;
 	width: 100%;
 	position: fixed;
 	background-color: #E0162B;
@@ -62,18 +62,12 @@
 	width: 75%;
 	height: 10%;
 }
-#pagestretch {
-	height: 3000px;
+#spacer {
+	top: 0;
+	left: 0;
+	right: 0;
+	float: left;
+	height: 10vh;
+	min-height: 50px;
 	width: 100%;
-	background: #05C900;
-	background: linear-gradient(-30deg, black, white);
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	left: 0px;
-	bottom: 0px;
-}
-body > :not(#navbar) {
-	position: absolute;
-	top: 10%;
 }
