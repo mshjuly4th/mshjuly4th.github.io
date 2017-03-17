@@ -10,11 +10,13 @@
 	right: 0px;
 	left: 0px;
 	transition: box-shadow 0.25s;
+	overflow: hidden;
 }
 /*#navbar > * {
 	height: 100%;
 }*/
 #logo-container {
+	overflow: visible;
 }
 .navlink,#logo {
 	height: 100%;
@@ -39,6 +41,8 @@
 	border-radius: 100%;
 	box-shadow: none;
 	transition: box-shadow 0.5s;
+	position: relative;
+	z-index: 2;
 }
 #logo:hover {
 	box-shadow: 0 0 10px 5px white;
@@ -56,9 +60,11 @@
 :not(.navlink) {
 	font-family: "Open Sans", Roboto, Arial;
 }
-.navlink:hover {
+.navlink:not(#logo-container):hover {
 	background-color: #E05463;
-	box-shadow: inset 0px 0px 10px 0px black;
+	box-shadow: 0px 0px 10px 0px black;
+	position: relative;
+	z-index: 3;
 }
 .navlink .navhighlight {
 	/*this works(?)*/
@@ -84,4 +90,15 @@
 }
 .shadowed {
 	box-shadow: 0px 1px 20px 0px black;
+}
+#footer {
+	float: left;
+	height: 5vh;
+	min-height: 25px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 0 -8px;
+	width: ;
+	background-color: #E0162B;
 }
