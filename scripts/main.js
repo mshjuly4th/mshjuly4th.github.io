@@ -24,27 +24,20 @@ $('document').ready(function() {
 });
 var topImg;
 var bottomImg;
-var swapZ = function() {
-	let tmp = $("#swap0").css("z-index");
-	$("#swap0").css("z-index", $("#swap1").css("z-index"));
-	$("#swap1").css("z-index", tmp);
-	// $("#swap" + ti).css("z-index", -1);
-	// $("#swap" + bi).css("z-index", 0);
-	$(".fade").removeClass("fade");
-}
 // $("#swap0").css("z-index", 0);
 // $("#swap1").css("z-index", -1);
 setInterval(function() {
 	if (currSlide == undefined) { //Initialize
 		currSlide = 0;
 		topImg = 0;
-		document.getElementById("swap" + topImg).src = slides[currSlide];
+		document.getElementById("swap1").src = slides[currSlide];
 	}
-	bottomImg = (topImg + 1) % 2;
 	currSlide = (currSlide + 1) % slides.length;
-	document.getElementById("swap" + bottomImg).src = slides[currSlide];
-	$("#swap" + bottomImg).css("opacity", 1);
-	$("#swap" + topImg).addClass("fade");
-	$("#swap" + topImg).on('oanimationend animationend webkitAnimationEnd', swapZ);
-	topImg = bottomImg;
+	document.getElementById("swap0").src = slides[currSlide];
+	$("#swap0").addClass("fade");
+	$("#swap0").on("animationend", function() {
+		document.getElementById("swap1").src = slides[currSlide];
+		$("#swap0").css("opacity", 0);
+		$("#swap0").removeClass("fade");
+	});
 }, slideTime)

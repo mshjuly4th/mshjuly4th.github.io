@@ -115,28 +115,32 @@
 	width: 100%;
 }
 #slide img {
+	object-fit: contain;
 	height: 100%;
 	width: 100%;
 	position: absolute;
 	margin: 0 auto;
 	left: 0;
 	right: 0;
+	background-color: black;
 }
 #slide img.fade {
-	animation-name: fade_out;
+	animation-name: fade_in;
 	animation-duration: 4s;
 	animation-iteration-count: 1;
 }
 #swap0 {
 	z-index: 0;
+	opacity: 0;
 }
 #swap1 {
 	z-index: -1;
+	opacity: 1;
 }
-@keyframes fade_out {
+@keyframes fade_in {
 	from {
-		opacity: 1;
-	} to {
 		opacity: 0;
+	} to {
+		opacity: 1;
 	}
 }
