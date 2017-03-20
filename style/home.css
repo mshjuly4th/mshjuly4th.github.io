@@ -122,7 +122,7 @@
 	margin: 0 auto;
 	left: 0;
 	right: 0;
-	background-color: black;
+	/*background-color: black;*/
 }
 #slide img.fade {
 	animation-name: fade_in;
