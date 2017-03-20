@@ -1,5 +1,9 @@
 var shadow;
 const shadowProp = '0px 1px 20px 0px black';
+const slides = ["images/IMG_1239.JPG", "images/IMG_1242.JPG", "images/IMG_9023.JPG", "images/IMG_9035.JPG", "images/IMG_9280.JPG"];
+const slideTime = 5000;
+//var swap = [document.getElementById("swap0"), document.getElementById("swap1")];
+var currSlide;
 var applyShadow = function(currScroll) {
 	if (shadow == undefined) shadow = currScroll == 0;
 	if (shadow && currScroll == 0) {
@@ -18,3 +22,29 @@ $('document').ready(function() {
 		applyShadow(window.scrollY);
 	});
 });
+var topImg;
+var bottomImg;
+var swapZ = function() {
+	let tmp = $("#swap0").css("z-index");
+	$("#swap0").css("z-index", $("#swap1").css("z-index"));
+	$("#swap1").css("z-index", tmp);
+	// $("#swap" + ti).css("z-index", -1);
+	// $("#swap" + bi).css("z-index", 0);
+	$(".fade").removeClass("fade");
+}
+// $("#swap0").css("z-index", 0);
+// $("#swap1").css("z-index", -1);
+setInterval(function() {
+	if (currSlide == undefined) { //Initialize
+		currSlide = 0;
+		topImg = 0;
+		document.getElementById("swap" + topImg).src = slides[currSlide];
+	}
+	bottomImg = (topImg + 1) % 2;
+	currSlide = (currSlide + 1) % slides.length;
+	document.getElementById("swap" + bottomImg).src = slides[currSlide];
+	$("#swap" + bottomImg).css("opacity", 1);
+	$("#swap" + topImg).addClass("fade");
+	$("#swap" + topImg).on('oanimationend animationend webkitAnimationEnd', swapZ);
+	topImg = bottomImg;
+}, slideTime)
