@@ -166,7 +166,9 @@
 	display: inline-block;
 	margin: 0 0.15vw;
 }
-.slidepick:hover {
+.slideselected,.slidepick:hover {
 	background: #1D97FF;
-	cursor: pointer;
+}
+.slidepick:hover {
+	curor: pointer;
 }
