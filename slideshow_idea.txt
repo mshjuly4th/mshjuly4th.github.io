@@ -1,0 +1,15 @@
+Idea for how slideshow would work:
+
+on document ready, append slides.length number of imgs (and set src) into #slideshow, set
+z-index to -1 and opacity to 0 on each except slide 0, which should have
+z-index 0 and opacity 1.
+
+setinterval:
+	set slide #(currSlide + 1) to z-index: 0, slide #currSlide to z-index:
+-1, and fade_in currSlide
+	bind animationend:
+		if there is a user-selected slide:
+			set currSlide to that slide
+			clear interval
+			restart interval
+			reset user-selected slide
