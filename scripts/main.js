@@ -17,11 +17,24 @@ var applyShadow = function(currScroll) {
 	}
 };
 var slideInterval;
-
+var changeSlide = function() {
+	currSlide = (currSlide + 1) % slides.length;
+	document.getElementById("swap0").src = slides[currSlide];
+	$("#swap0").addClass("fade");
+	$(".slideselected").removeClass("slideselected");
+	$(".slidepick[slide='" + currSlide + "']").addClass("slideselected");
+	$("#swap0").on("animationend", function() {
+		document.getElementById("swap1").src = slides[currSlide];
+		$("#swap0").css("opacity", 0);
+		$("#swap0").removeClass("fade");
+	});
+}
 var startSlideshow = function() {
 	currSlide = (currSlide + 1) % slides.length;
 	document.getElementById("swap0").src = slides[currSlide];
 	$("#swap0").addClass("fade");
+	$(".slideselected").removeClass("slideselected");
+	$(".slidepick[slide='" + currSlide + "']").addClass("slideselected");
 	$("#swap0").on("animationend", function() {
 		document.getElementById("swap1").src = slides[currSlide];
 		$("#swap0").css("opacity", 0);
@@ -31,6 +44,8 @@ var startSlideshow = function() {
 		currSlide = (currSlide + 1) % slides.length;
 		document.getElementById("swap0").src = slides[currSlide];
 		$("#swap0").addClass("fade");
+		$(".slideselected").removeClass("slideselected");
+		$(".slidepick[slide='" + currSlide + "']").addClass("slideselected");
 		$("#swap0").on("animationend", function() {
 			document.getElementById("swap1").src = slides[currSlide];
 			$("#swap0").css("opacity", 0);
