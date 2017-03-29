@@ -1,3 +1,4 @@
+body { width: auto; }
 #navbar {
 	/*clear: both;*/
 	z-index: 1;
@@ -130,14 +131,18 @@
 	list-style-type: none;
 }
 #slide > li {
-	display: inline;
+	display: inline-block;
+	float: left;
+	height: 100%;
+	width: auto;
+	position: relative;
 }
 #slide img {
 	object-fit: contain;
 	height: 100%;
-	width: 100%;
-	float: left;
-	/*position: absolute;*/
+	/*width: 100%;*/
+	float: center;
+	position: absolute;
 	margin: 0 auto;
 	left: 0;
 	right: 0;

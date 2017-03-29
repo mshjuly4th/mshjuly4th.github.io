@@ -58,9 +58,16 @@ $('document').ready(function() {
 		applyShadow(window.scrollY);
 	});
 	for (let i = 0; i < slides.length; i++) {
-		$("#slide").append("<li><img slide=" + i + " src=\"" + slides[i] + "\" /></li>");
+		$("#slide").append("<li slide=" + i + "><img slide=" + i + " src=\"" + slides[i] + "\" /></li>");
+		let lastLeft = i == 0 ? 0 : $("li[slide=\"" + i + "\"]").css("left");
+		if (typeof lastLeft == "string") {
+			lastLeft = parseInt(lastLeft.substring(0, lastLeft.length - 2));
+			console.log(lastLeft);
+		}
+		$("li[slide=\"" + i + "\"]").css("left", i == 0 ? 0 : lastLeft + $("img[slide=\"" + i + "\"]")[0].clientWidth);
 		$("#pickcontainer").append("<div class=\"slidepick\" slide=" + i + "></div>")
 	}
+	$("#slideshow").css("width", $("img[slide=\"0\"]").css("width"))
 	// $("#slide img:not(#slide img[slide=\"0\"])").css("z-index", -1).css("opacity", 0);
 	// $("#slide img[slide=\"0\"]").css("z-index", 0).css("opacity", 1);
 	// startSlideshow();
