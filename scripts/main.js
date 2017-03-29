@@ -40,14 +40,14 @@ var transSlide = function() {
 	}
 }
 var startSlideshow = function() {
-	slideInterval = setInterval(function() {
-		$("#slide img[slide=\"" + currSlide + "\"]").css("z-index", -1);
-		changeSlide();
-		$("#slide img[slide=\"" + currSlide + "\"]")
-			.css("z-index", 0)
-			.addClass("fade")
-			.on("animationend", transSlide);
-	}, slideTime);
+	// slideInterval = setInterval(function() {
+	// 	$("#slide img[slide=\"" + currSlide + "\"]").css("z-index", -1);
+	// 	changeSlide();
+	// 	$("#slide img[slide=\"" + currSlide + "\"]")
+	// 		.css("z-index", 0)
+	// 		.addClass("fade")
+	// 		.on("animationend", transSlide);
+	// }, slideTime);
 }
 var endSlideshow = function() {
 	clearInterval(slideInterval);
@@ -58,15 +58,15 @@ $('document').ready(function() {
 		applyShadow(window.scrollY);
 	});
 	for (let i = 0; i < slides.length; i++) {
-		$("#slide").append("<img slide=" + i + " src=\"" + slides[i] + "\" />");
+		$("#slide").append("<li><img slide=" + i + " src=\"" + slides[i] + "\" /></li>");
 		$("#pickcontainer").append("<div class=\"slidepick\" slide=" + i + "></div>")
 	}
-	$("#slide img:not(#slide img[slide=\"0\"])").css("z-index", -1).css("opacity", 0);
-	$("#slide img[slide=\"0\"]").css("z-index", 0).css("opacity", 1);
-	startSlideshow();
-	$(".slidepick").click(function() {
-		userSelectedSlide = parseInt($(this).attr("slide"));
-	})
+	// $("#slide img:not(#slide img[slide=\"0\"])").css("z-index", -1).css("opacity", 0);
+	// $("#slide img[slide=\"0\"]").css("z-index", 0).css("opacity", 1);
+	// startSlideshow();
+	// $(".slidepick").click(function() {
+	// 	userSelectedSlide = parseInt($(this).attr("slide"));
+	// });
 	// $(".slidepick").click(function() {
 	// 	currSlide = parseInt($(this).attr("slide"));
 	// 	if ($("#swap0").hasClass("fade")) {
