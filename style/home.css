@@ -1,4 +1,4 @@
-body { width: auto; }
+body { width: auto; overflow: visible;}
 #navbar {
 	/*clear: both;*/
 	z-index: 1;

@@ -59,12 +59,15 @@ $('document').ready(function() {
 	});
 	for (let i = 0; i < slides.length; i++) {
 		$("#slide").append("<li slide=" + i + "><img slide=" + i + " src=\"" + slides[i] + "\" /></li>");
-		let lastLeft = i == 0 ? 0 : $("li[slide=\"" + i + "\"]").css("left");
+		let lastLeft = i == 0 ? 0 : $("li[slide=\"" + (i - 1) + "\"]").css("left");
 		if (typeof lastLeft == "string") {
+			console.log($("li[slide=\"" + (i - 1) + "\"]").css("left"));
+			console.log(lastLeft);
 			lastLeft = parseInt(lastLeft.substring(0, lastLeft.length - 2));
 			console.log(lastLeft);
 		}
-		$("li[slide=\"" + i + "\"]").css("left", i == 0 ? 0 : lastLeft + $("img[slide=\"" + i + "\"]")[0].clientWidth);
+		// $("li[slide=\"" + i + "\"]").css("left", i == 0 ? 0 : lastLeft + $("img[slide=\"" + i + "\"]")[0].clientWidth);
+		$("li[slide=\"" + i + "\"]").css("left", (i == 0 ? 0 : lastLeft + $("img[slide=\"" + (i - 1) + "\"]")[0].clientWidth) + "px");
 		$("#pickcontainer").append("<div class=\"slidepick\" slide=" + i + "></div>")
 	}
 	$("#slideshow").css("width", $("img[slide=\"0\"]").css("width"))
