@@ -1,6 +1,0 @@
-Idea for slideshow controlled by JavaScript:
-Less elegant but more likely to work.
-
-1. Set container inside #slide(show?)
-2. set container transition to transform
-3. use javascript to change transform
