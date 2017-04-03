@@ -120,12 +120,14 @@ body { width: auto; overflow: visible;}
 	flex: 1 0 auto;
 	width: 100%;
 	margin-bottom: 0.5vw;
+	text-align: left;
 }
 #slide {
 	height: 100%;
 	width: 100%;
 	padding: 0;
 	margin: 0;
+	position: absolute;
 	display: inline-block;
 	float: left;
 	list-style-type: none;
