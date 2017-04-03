@@ -94,6 +94,8 @@ var switchSlide = function(slide) {
 	currSlide = slide;
 	$("#slide").css("transform", "translate(" + -slidePos[currSlide] + "px, 0px)");
 	$("#slideshow").css("width", $("img[slide=\"" + currSlide + "\"]")[0].clientWidth);
+	$(".slideselected").removeClass("slideselected");
+	$(".slidepick[slide=\"" + currSlide + "\"]").addClass("slideselected");
 }
 var endSlideshow = function() {
 	clearInterval(slideInterval);

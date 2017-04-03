@@ -189,8 +189,11 @@ body { width: auto; overflow: visible;}
 	cursor: pointer;
 	transition: background 0.5s;
 }
-.slideselected,.slidepick:hover {
+.slideselected {
 	background: #1D97FF;
+}
+.slidepick:hover {
+	background: #67B9FF;
 }
 .slidepick:hover {
 	curor: pointer;
