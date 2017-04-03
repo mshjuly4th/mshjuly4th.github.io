@@ -1,9 +1,8 @@
 var shadow;
-var imgToProc = [];
-var imgReady = [];
 const shadowProp = '0px 1px 20px 0px black';
 const slides = ["images/IMG_1239.JPG", "images/IMG_1242.JPG", "images/IMG_9023.JPG", "images/IMG_9035.JPG", "images/IMG_9280.JPG"];
 const slideTime = 5000;
+var slidePos = [];
 //var swap = [document.getElementById("swap0"), document.getElementById("swap1")];
 var currSlide = 0;
 var applyShadow = function(currScroll) {
@@ -81,19 +80,20 @@ var startSlideshow = function() {
 // 	}
 // }
 var processImg = function() {
+	slidePos = [];
 	for (let n = 0; n < slides.length; n++) {
-		let lastLeft = n == 0 ? 0 : $("li[slide=\"" + (n - 1) + "\"]").css("left");
-		if (typeof lastLeft == "string") {
-			console.log($("li[slide=\"" + (n - 1) + "\"]").css("left"));
-			console.log(lastLeft);
-			lastLeft = parseInt(lastLeft.substring(0, lastLeft.length - 2));
-			console.log(lastLeft);
-		}
+		slidePos.push(n == 0 ? 0 : slidePos[n - 1] + $("img[slide=\"" + (n - 1) + "\"]")[0].clientWidth)
 		// console.log(i == 0 ? "zero" : $("img[slide=\"" + (i - 1) + "\"]")[0].clientWidth);
 		// $("li[slide=\"" + i + "\"]").css("left", i == 0 ? 0 : lastLeft + $("img[slide=\"" + i + "\"]")[0].clientWidth);
-		$("li[slide=\"" + n + "\"]").css("left", (n == 0 ? 0 : lastLeft + $("img[slide=\"" + (n - 1) + "\"]")[0].clientWidth) + "px");
+		$("li[slide=\"" + n + "\"]").css("left", slidePos[n] + "px");
 	}
-	$("#slideshow").css("width", $("img[slide=\"0\"]").css("width"));
+	$("#slideshow").css("width", $("img[slide=\"" + currSlide + "\"]").css("width"));
+	switchSlide(currSlide); //This is for resizing when the slide has already been switched.
+}
+var switchSlide = function(slide) {
+	currSlide = slide;
+	$("#slide").css("transform", "translate(" + -slidePos[currSlide] + "px, 0px)");
+	$("#slideshow").css("width", $("img[slide=\"" + currSlide + "\"]")[0].clientWidth);
 }
 var endSlideshow = function() {
 	clearInterval(slideInterval);
@@ -111,6 +111,9 @@ $('document').ready(function() {
 	}
 	$("#slide").waitForImages(processImg);
 	$(window).resize(processImg);
+	$(".slidepick").click(function() {
+		switchSlide(parseInt($(this).attr("slide")));
+	})
 	// $("#slide img:not(#slide img[slide=\"0\"])").css("z-index", -1).css("opacity", 0);
 	// $("#slide img[slide=\"0\"]").css("z-index", 0).css("opacity", 1);
 	// startSlideshow();
