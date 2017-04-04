@@ -90,6 +90,12 @@ var processImg = function() {
 	$("#slideshow").css("width", $("img[slide=\"" + currSlide + "\"]").css("width"));
 	switchSlide(currSlide); //This is for resizing when the slide has already been switched.
 }
+//This function is just to call both processImg and delete the loading gif
+var initSlideshow = function() {
+	$("#loading").remove();
+	processImg();
+	$("li[slide]").css("opacity", 1);
+}
 var switchSlide = function(slide) {
 	currSlide = slide;
 	$("#slide").css("transform", "translate(" + -slidePos[currSlide] + "px, 0px)");
@@ -106,12 +112,12 @@ $('document').ready(function() {
 		applyShadow(window.scrollY);
 	});
 	for (let i = 0; i < slides.length; i++) {
-		$("#slide").append("<li slide=" + i + "><img slide=" + i + " src=\"" + slides[i] + "\" /></li>");
+		$("#slide").append("<li slide=" + i + " style=\"opacity: 0;\" ><img slide=" + i + " src=\"" + slides[i] + "\" /></li>");
 		// $("img[slide=\"" + i + "\"]").eq(0).on('load', processImg(i));
 		// $("img[slide=\"" + i + "\"]")[0].src = slides[i];
 		$("#pickcontainer").append("<div class=\"slidepick\" slide=" + i + "></div>")
 	}
-	$("#slide").waitForImages(processImg);
+	$("#slide").waitForImages(initSlideshow);
 	$(window).resize(processImg);
 	$(".slidepick").click(function() {
 		switchSlide(parseInt($(this).attr("slide")));
