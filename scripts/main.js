@@ -1,7 +1,7 @@
 var shadow;
 const shadowProp = '0px 1px 20px 0px black';
 const slides = ["images/IMG_1239.JPG", "images/IMG_1242.JPG", "images/IMG_9023.JPG", "images/IMG_9035.JPG", "images/IMG_9280.JPG"];
-const slideTime = 5000;
+const slideTime = 3000;
 var slidePos = [];
 //var swap = [document.getElementById("swap0"), document.getElementById("swap1")];
 var currSlide = 0;
@@ -93,6 +93,9 @@ var processImg = function() {
 //This function is just to call both processImg and delete the loading gif
 var initSlideshow = function() {
 	$("#loading").fadeOut();
+	slideInterval = setInterval(function() {
+		switchSlide((currSlide + 1) % slides.length);
+	}, slideTime);
 	processImg();
 	$("#slide > li").css("opacity", 1);
 }
@@ -121,7 +124,8 @@ $('document').ready(function() {
 	$(window).resize(processImg);
 	$(".slidepick").click(function() {
 		switchSlide(parseInt($(this).attr("slide")));
-	})
+		if (slideInterval) endSlideshow();
+	});
 	// $("#slide img:not(#slide img[slide=\"0\"])").css("z-index", -1).css("opacity", 0);
 	// $("#slide img[slide=\"0\"]").css("z-index", 0).css("opacity", 1);
 	// startSlideshow();
