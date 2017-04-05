@@ -1,6 +1,6 @@
 var shadow;
 const shadowProp = '0px 1px 20px 0px black';
-const slides = ["images/IMG_1239.JPG", "images/IMG_1242.JPG", "images/IMG_9023.JPG", "images/IMG_9035.JPG", "images/IMG_9280.JPG"];
+const slides = ["images/IMG_1239.JPG", "images/IMG_1242.JPG", "images/IMG_9023.JPG", "images/IMG_9035.JPG", "images/IMG_9280.JPG", "images/IMG_7552.jpg", "images/IMG_7535.jpg", "images/IMG_7516.jpg"];
 const slideTime = 3000;
 var slidePos = [];
 //var swap = [document.getElementById("swap0"), document.getElementById("swap1")];
