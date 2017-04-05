@@ -116,6 +116,7 @@ body { width: auto; overflow: visible;}
 	height: 40vw;
 	width: 70vw;
 	border: 1px solid black;
+	border-radius: 5%;
 	padding: 1vw;
 	display: flex;
 	flex-flow: column;
@@ -129,6 +130,7 @@ body { width: auto; overflow: visible;}
 	margin-bottom: 0.5vw;
 	text-align: left;
 	overflow: hidden;
+	border-radius: 5%;
 }
 #slide {
 	height: 100%;
@@ -159,6 +161,7 @@ body { width: auto; overflow: visible;}
 	margin: 0 auto;
 	left: 0;
 	right: 0;
+	/*border-radius: 10%; unnecessary because of hidden overflow*/
 	/*background-color: white;*/
 }
 #slide img.fade {
