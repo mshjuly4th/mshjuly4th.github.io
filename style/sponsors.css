@@ -1,0 +1,41 @@
+.sponsorcontainer {
+	clear: both;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	/*white-space: pre-wrap;*/
+	/*padding: 3vw;*/
+}
+.sponsor {
+	height: 40vh;
+	position: relative;
+	/*clear: both;*/
+	display: inline-block;
+	box-shadow: black 0 0 10px 1px;
+	margin: 1vh;
+	text-decoration: none;
+	color: black;
+}
+.sponsor:hover {
+	cursor: pointer;
+}
+.sponsorimg {
+	height: 100%;
+	/*border: solid 2px black;*/
+	object-fit: contain;
+	/*clear: both;*/
+	/*position: relative;*/
+}
+.sponsorinfo {
+	background-color: rgba(255, 255, 255, 0.5);
+	overflow: hidden;
+	height: 0;
+	width: 100%;
+	bottom: 0px;
+	position: absolute;
+	transition: height 0.5s;
+	font-size: 2em;
+}
+.sponsor:hover .sponsorinfo {
+	height: 20%;
+}
