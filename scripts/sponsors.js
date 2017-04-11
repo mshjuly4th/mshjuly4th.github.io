@@ -21,7 +21,7 @@ $(document).ready(function() {
 		for (var level in data) {
 			for (var s in data[level])
 			var sponsor = data[level][s];
-			addSponsor(s, sponsor.label, sponsor.link, "images/TRGlogo.png");
+			addSponsor(s, sponsor.label, sponsor.link, "images/IMG_9035hq.JPG");
 		}
 	});
 });
