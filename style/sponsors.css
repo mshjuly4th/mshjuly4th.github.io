@@ -6,6 +6,29 @@
 	/*white-space: pre-wrap;*/
 	/*padding: 3vw;*/
 }
+.sponsorlevel {
+	height: 10vh;
+	width: 50vw;
+	/*border-radius: 50%;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: black 0 0 5px 1px;
+	font-size: 2em;
+	/*margin-left: 25vw; HOW DO I CENTER?*/
+}
+#bronze {
+	background-color: #d6b326;
+}
+#silver {
+	background-color: #bababa;
+}
+#gold {
+	background-color: #fcd825;
+}
+#platinum {
+	background-color: #dbdbdb;
+}
 .sponsor {
 	height: 40vh;
 	position: relative;

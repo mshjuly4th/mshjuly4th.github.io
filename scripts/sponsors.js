@@ -1,5 +1,5 @@
-var addSponsor = function(name, label, link, img) {
-	$("#sponsorcontainer").append("\
+var addSponsor = function(level, name, label, link, img) {
+	$("#" + level).after("\
 		<a class=\"sponsor\" id=\"" + name + "\" href=\"" + link + "\">\
 			<img class=\"loading sponsorload\" src=\"images/loading.png\" />\
 			<img class=\"sponsorimg\" />\
@@ -23,7 +23,7 @@ $(document).ready(function() {
 		for (var level in data) {
 			for (var s in data[level]) {
 				var sponsor = data[level][s];
-				addSponsor(s, sponsor.label, sponsor.link, sponsor.image);
+				addSponsor(level, s, sponsor.label, sponsor.link, sponsor.image);
 			}
 		}
 	});
