@@ -1,3 +1,7 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
 #sponsorcontainer {
 	clear: both;
 	width: 100%;
@@ -6,16 +10,27 @@
 	/*white-space: pre-wrap;*/
 	/*padding: 3vw;*/
 }
-.sponsorlevel {
+/*.sponsorlevel {
 	height: 10vh;
 	width: 50vw;
-	/*border-radius: 50%;*/
+	/*border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	box-shadow: black 0 0 5px 1px;
 	font-size: 2em;
-	/*margin-left: 25vw; HOW DO I CENTER?*/
+	/*margin-left: 25vw; HOW DO I CENTER?
+}*/
+.sponsorlevel {
+	height: 10vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
+	/*font-family:;*/
+/*	left: 0px;
+	right: 0px;*/
 }
 #bronze {
 	background-color: #d6b326;
