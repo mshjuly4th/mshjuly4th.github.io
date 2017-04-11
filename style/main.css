@@ -97,6 +97,20 @@
 .shadowed {
 	box-shadow: 0px 1px 20px 0px black;
 }
+@keyframes loading_anim {
+	from {
+		transform: rotate(0deg);
+	} to {
+		transform: rotate(-360deg);
+	}
+}
+.loading {
+	animation-name: loading_anim;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	position: absolute;
+}
 #footer {
 	float: left;
 	height: 5vh;

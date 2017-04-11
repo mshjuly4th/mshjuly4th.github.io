@@ -79,7 +79,7 @@ var processImg = function() {
 }
 //This function is just to call both processImg and delete the loading gif
 var initSlideshow = function() {
-	$("#loading").fadeOut();
+	$("#slideload").fadeOut();
 	slideInterval = setInterval(function() {
 		switchSlide((currSlide + 1) % slides.length);
 	}, slideTime);
