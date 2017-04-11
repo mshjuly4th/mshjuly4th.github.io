@@ -21,9 +21,10 @@ $(document).ready(function() {
 		var data = ds.val();
 		console.log(data);
 		for (var level in data) {
-			for (var s in data[level])
-			var sponsor = data[level][s];
-			addSponsor(s, sponsor.label, sponsor.link, sponsor.image);
+			for (var s in data[level]) {
+				var sponsor = data[level][s];
+				addSponsor(s, sponsor.label, sponsor.link, sponsor.image);
+			}
 		}
 	});
 });
