@@ -36,6 +36,9 @@
 	transition: opacity 1s;
 }
 .sponsorinfo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: rgba(255, 255, 255, 0.5);
 	overflow: hidden;
 	height: 0;
@@ -43,7 +46,7 @@
 	bottom: 0px;
 	position: absolute;
 	transition: height 0.5s;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 .sponsor:hover .sponsorinfo {
 	height: 20%;
