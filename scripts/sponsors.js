@@ -1,10 +1,16 @@
-var addSponsor = function(label, link, img) {
+var addSponsor = function(name, label, link, img) {
 	$("#sponsorcontainer").append("\
-		<a class=\"sponsor\" href=\"" + link + "\">\
+		<a class=\"sponsor\" id=\"" + name + "\" href=\"" + link + "\">\
+			<img class=\"loading sponsorload\" src=\"images/loading.png\" />\
 			<img class=\"sponsorimg\" src=\"" + img + "\" />\
 			<div class=\"sponsorinfo\">" + label + "</div>\
 		</a>\
 	");
+	$("#" + name + " .sponsorimg")[0].addEventListener('load', function() {
+		let curr = name;
+		$("#" + curr + " .loading").fadeOut();
+		$("#" + curr + " .sponsorimg").css("opacity", 1);
+	})
 }
 $(document).ready(function() {
 	// addSponsor("MSH July 4th - Dynamic", "http://test.mshjuly4th.com", "images/TRGlogo.png");
@@ -15,7 +21,7 @@ $(document).ready(function() {
 		for (var level in data) {
 			for (var s in data[level])
 			var sponsor = data[level][s];
-			addSponsor(sponsor.label, sponsor.link, "images/TRGlogo.png");
+			addSponsor(s, sponsor.label, sponsor.link, "images/TRGlogo.png");
 		}
 	});
 });

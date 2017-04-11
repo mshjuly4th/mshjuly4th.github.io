@@ -19,12 +19,21 @@
 .sponsor:hover {
 	cursor: pointer;
 }
+.sponsorload {
+	height: 8vh;
+	width: 8vh;
+	top: 50%;
+	left: 50%;
+	margin: -4vh 0 0 -4vh;
+}
 .sponsorimg {
 	height: 100%;
 	/*border: solid 2px black;*/
 	object-fit: contain;
 	/*clear: both;*/
 	/*position: relative;*/
+	opacity: 0;
+	transition: opacity 1s;
 }
 .sponsorinfo {
 	background-color: rgba(255, 255, 255, 0.5);
