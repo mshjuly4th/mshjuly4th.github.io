@@ -51,6 +51,7 @@ html, body {
 }
 .sponsor {
 	height: 40vh;
+	width: 30vw;
 	position: relative;
 	/*clear: both;*/
 	box-shadow: black 0 0 10px 1px;
@@ -58,6 +59,7 @@ html, body {
 	margin: 1vh;
 	text-decoration: none;
 	color: black;
+	/*transition: width 3s; DOESN'T WORK*/
 }
 /*Removed for aesthetics
 #platinum ~ .sponsor {

@@ -9,6 +9,7 @@ var addSponsor = function(level, name, label, link, img) {
 	$("#" + name + " .sponsorimg")[0].addEventListener('load', function() {
 		$("#" + name + " .loading").fadeOut();
 		$("#" + name + " .sponsorimg").css("opacity", 1);
+		$("#" + name).css("width", "auto");
 	});
 	firebase.storage().ref("sponsors/" + img).getDownloadURL().then(function(url) {
 		$("#" + name + " .sponsorimg")[0].src = url;
