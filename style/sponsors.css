@@ -28,32 +28,50 @@ html, body {
 	justify-content: center;
 	align-items: center;
 	font-size: 2em;
+	font-family: "Rubik Mono One", "Open Sans", Roboto, Arial;
 	/*font-family:;*/
 /*	left: 0px;
 	right: 0px;*/
 }
 #bronze {
 	background-color: #d6b326;
+	box-shadow: #d6b326 0 0 10px 1px;
 }
 #silver {
 	background-color: #bababa;
+	box-shadow: #bababa 0 0 10px 1px;
 }
 #gold {
 	background-color: #fcd825;
+	box-shadow: #fcd825 0 0 10px 1px;
 }
 #platinum {
 	background-color: #dbdbdb;
+	box-shadow: #dbdbdb 0 0 20px 5px;
 }
 .sponsor {
 	height: 40vh;
 	position: relative;
 	/*clear: both;*/
-	display: inline-block;
 	box-shadow: black 0 0 10px 1px;
+	display: inline-block;
 	margin: 1vh;
 	text-decoration: none;
 	color: black;
 }
+/*Removed for aesthetics
+#platinum ~ .sponsor {
+	box-shadow: #dbdbdb 0 0 10px 1px;
+}
+#gold ~ .sponsor {
+	box-shadow: #fcd825 0 0 10px 1px;
+}
+#silver ~ .sponsor {
+	box-shadow: #bababa 0 0 10px 1px;
+}
+#bronze ~ .sponsor {
+	box-shadow: #d6b326 0 0 10px 1px;
+}*/
 .sponsor:hover {
 	cursor: pointer;
 }
