@@ -4,12 +4,14 @@ html, body {
 }
 #navbar {
 	/*clear: both;*/
+	margin-top: 0;
 	z-index: 1;
 	height: 10%;
 	min-height: 50px;
 	width: 100%;
 	position: fixed;
-	background-color: #E0162B;
+	/*background-color: #E0162B;*/
+	background-color: white;
 	top: 0px;
 	right: 0px;
 	left: 0px;
@@ -32,7 +34,8 @@ html, body {
 	min-width: 0;
 	width: -webkit-fit-content;
 	width: fit-content;
-	background-color: #E0162B;
+	/*background-color: #E0162B;*/
+	background-color: white;
 	white-space: nowrap;
 	font-family: Poppins, Lato, Arial;
 	color: inherit;
@@ -49,7 +52,8 @@ html, body {
 	z-index: 2;
 }
 #logo-container:hover {
-	background: #E0162B;
+	/*background: #E0162B;*/
+	background-color: #EBEBEB;
 }
 #logo-container:hover #logo {
 	box-shadow: 0 0 10px 5px white;
@@ -70,7 +74,8 @@ html, body {
 	font-family: "Open Sans", Roboto, Arial;
 }
 .navlink:not(#logo-container):hover {
-	background-color: hsla(354, 71%, 49%, 1);
+	/*background-color: hsla(354, 71%, 49%, 1);*/
+	background-color: #EBEBEB;
 	/*box-shadow: inset 0px 0px 10px 0px black;*/
 	position: relative;
 	color: black;

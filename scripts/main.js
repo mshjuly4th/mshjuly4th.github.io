@@ -17,13 +17,13 @@ var applyShadow = function(currScroll) {
 };
 $(document).ready(function() {
 	applyShadow(window.scrollY);
-	window.addEventListener('scroll', homePage ?
+	window.addEventListener('scroll', typeof homePage != "undefined" ?
 		function(e) {
 			let fullLogoHeight = $("#fulllogo").height();
 			let change = applyShadow(window.scrollY - fullLogoHeight); //Assuming fulllogo is at the top
 			// console.log(window.scrollY - fullLogoHeight);
 			if (change && window.scrollY - fullLogoHeight <= 0) {
-				document.getElementById("navbar").style = "width: auto; height: 10vh; position: static;";
+				document.getElementById("navbar").style = "width: auto; height: 10vh; position: static; border-bottom: 2px solid #EBEBEB";
 				document.getElementById("spacer").style = "display: none;";
 			} else if (change && window.scrollY - fullLogoHeight > 0) {
 				document.getElementById("navbar").style = "";
