@@ -1,4 +1,5 @@
 var addSponsor = function(level, name, label, link, img) {
+	// if ()
 	$("#" + level).after("\
 		<a class=\"sponsor\" id=\"" + name + "\" href=\"" + link + "\">\
 			<img class=\"loading sponsorload\" src=\"images/loading.png\" />\
