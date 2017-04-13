@@ -1,20 +1,23 @@
-var addSponsor = function(level, name, label, link, img) {
-	// if ()
-	$("#" + level).after("\
-		<a class=\"sponsor\" id=\"" + name + "\" href=\"" + link + "\">\
-			<img class=\"loading sponsorload\" src=\"images/loading.png\" />\
-			<img class=\"sponsorimg\" />\
-			<div class=\"sponsorinfo\">" + label + "</div>\
-		</a>\
-	");
-	$("#" + name + " .sponsorimg")[0].addEventListener('load', function() {
-		$("#" + name + " .loading").fadeOut();
-		$("#" + name + " .sponsorimg").css("opacity", 1);
-		$("#" + name).css("width", "auto");
-	});
-	firebase.storage().ref("sponsors/" + img).getDownloadURL().then(function(url) {
-		$("#" + name + " .sponsorimg")[0].src = url;
-	});
+var addSponsor = function(level, name, sponsor) {
+	if (level == "bronze") {
+		$("#bronzecontainer").append((document.getElementById("bronzecontainer").innerHTML == "" ? "" : "<br>") + sponsor.label);
+	} else {
+		$("#" + level).after("\
+			<a class=\"sponsor\" id=\"" + name + "\" href=\"" + sponsor.link + "\">\
+				<img class=\"loading sponsorload\" src=\"images/loading.png\" />\
+				<img class=\"sponsorimg\" />\
+				<div class=\"sponsorinfo\">" + sponsor.label + "</div>\
+			</a>\
+		");
+		$("#" + name + " .sponsorimg")[0].addEventListener('load', function() {
+			$("#" + name + " .loading").fadeOut();
+			$("#" + name + " .sponsorimg").css("opacity", 1);
+			$("#" + name).css("width", "auto");
+		});
+		firebase.storage().ref("sponsors/" + sponsor.image).getDownloadURL().then(function(url) {
+			$("#" + name + " .sponsorimg")[0].src = url;
+		});
+	}
 }
 $(document).ready(function() {
 	// addSponsor("MSH July 4th - Dynamic", "http://test.mshjuly4th.com", "images/TRGlogo.png");
@@ -25,7 +28,7 @@ $(document).ready(function() {
 		for (var level in data) {
 			for (var s in data[level]) {
 				var sponsor = data[level][s];
-				addSponsor(level, s, sponsor.label, sponsor.link, sponsor.image);
+				addSponsor(level, s, sponsor);
 			}
 		}
 	});
