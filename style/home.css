@@ -4,6 +4,15 @@
 	height: auto;
 	border-bottom: 2px solid #EBEBEB;
 }
+.stat {
+	width: auto !important;
+	height: 10vh !important;
+	position: static !important;
+	border-bottom: 2px solid #EBEBEB !important;
+}
+.invis {
+	display: none;
+}
 #slideshow-container {
 	clear: both;
 }
@@ -104,4 +113,3 @@
 }
 .slidepick:hover {
 	curor: pointer;
-}

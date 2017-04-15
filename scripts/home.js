@@ -104,7 +104,7 @@ $('document').ready(function() {
 		$("#pickcontainer").append("<div class=\"slidepick\" slide=" + i + "></div>")
 	}
 	$("#slide").waitForImages(initSlideshow);
-	$(window).resize(processImg);
+	$(window).resize(debounce(processImg, 125));
 	$(".slidepick").click(function() {
 		switchSlide(parseInt($(this).attr("slide")));
 		if (slideInterval) endSlideshow();
