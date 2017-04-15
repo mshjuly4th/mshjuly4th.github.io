@@ -15,7 +15,7 @@ function debounce(func, wait, immediate) {
 	};
 };
 //Returns if a change in shadow occurred.
-var applyShadow = function(currScroll) {
+var navControl = function(currScroll) {
 	if (shadow == undefined) shadow = currScroll <= 0;
 	if (shadow && currScroll <= 0) {
 		$("#navbar").removeClass("shadowed");
@@ -30,30 +30,32 @@ var applyShadow = function(currScroll) {
 	} else return false;
 	return true;
 };
+var navControlHome = function(currScroll) {
+	let fullLogoHeight = fullLogo.height();
+	let change = navControl(currScroll - fullLogoHeight); //Assuming fulllogo is at the top
+	// console.log(currScroll - fullLogoHeight);
+	if (change && currScroll - fullLogoHeight <= 0) {
+		$("#navbar").addClass("stat");
+		$("#spacer").addClass("invis");
+	} else if (change && currScroll - fullLogoHeight > 0) {
+		$("#navbar").removeClass("stat");
+		$("#spacer").removeClass("invis");
+	}
+}
 $(document).ready(function() {
-	if (typeof homePage != undefined) {
+	if (typeof homePage != "undefined") {
 		fullLogo = $("#fulllogo");
-		// console.log(fullLogo[0]);
-		applyShadow(window.scrollY - fullLogo.height());
+		navControlHome(window.scrollY);
 	} else {
-		applyShadow(window.scrollY);
+		navControl(window.scrollY);
 	}
 	window.addEventListener('scroll', (typeof homePage != "undefined" ?
 		function(e) {
-			let fullLogoHeight = fullLogo.height();
-			let change = applyShadow(window.scrollY - fullLogoHeight); //Assuming fulllogo is at the top
-			// console.log(window.scrollY - fullLogoHeight);
-			if (change && window.scrollY - fullLogoHeight <= 0) {
-				$("#navbar").addClass("stat");
-				$("#spacer").addClass("invis");
-			} else if (change && window.scrollY - fullLogoHeight > 0) {
-				$("#navbar").removeClass("stat");
-				$("#spacer").removeClass("invis");
-			}
+			navControlHome(window.scrollY);
 		}
 		:
 		function(e) {
-			applyShadow(window.scrollY);
+			navControl(window.scrollY);
 		})
 	);
 });
