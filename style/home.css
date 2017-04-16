@@ -112,3 +112,17 @@
 	background: #67B9FF;
 	cursor: pointer;
 }
+.slidearrow-container {
+	position: absolute;
+	height: 13.33vh;/*40/3*/
+	width: 13.33vh;
+	background-color: white;
+	top: 50%;
+	margin-top: -6.67vh;
+}
+#leftslidearrow-container {
+	left: 0;
+}
+#rightslidearrow-container {
+	right: 0;
+}
