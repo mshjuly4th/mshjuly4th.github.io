@@ -114,15 +114,55 @@
 }
 .slidearrow-container {
 	position: absolute;
-	height: 13.33vh;/*40/3*/
-	width: 13.33vh;
-	background-color: white;
+	height: 10vw;/*40/3*/
+	width: 10vw;
+	background-color: rgba(255, 255, 255, 0.5);
 	top: 50%;
-	margin-top: -6.67vh;
+	margin-top: -5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.5s; /*why doesn't this work?*/
+	/*padding: 3.33vw;*/
+	/*filter: blur(5px);*/
 }
 #leftslidearrow-container {
-	left: 0;
+	left: -10vw;
+	transition: left 0.5s;
 }
 #rightslidearrow-container {
+	right: -10vw;
+	transition: right 0.5s;
+}
+#slidecontainer:hover #leftslidearrow-container {
+	left: 0;
+}
+#slidecontainer:hover #rightslidearrow-container {
 	right: 0;
 }
+.slidearrow-container:hover {
+	cursor: pointer;
+	background-color: white;
+}
+.slidearrow {
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	transform: rotate(45deg);
+	/*box-shadow: inset 1vw 0 0 10 0 black;*/
+}
+#leftslidearrow {
+	border-bottom: 1vw black solid;
+	border-left: 1vw black solid;
+	margin-left: 1vw;
+}
+#rightslidearrow {
+	border-top: 1vw black solid;
+	border-right: 1vw black solid;
+	margin-left: -1vw;
+}
+/*@media all and (orientation: portrait) {
+	.slidearrow-container {
+		background-color: red;
+	}
+}*/
