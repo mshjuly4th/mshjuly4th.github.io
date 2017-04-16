@@ -110,6 +110,5 @@
 }
 .slidepick:hover {
 	background: #67B9FF;
+	cursor: pointer;
 }
-.slidepick:hover {
-	curor: pointer;
