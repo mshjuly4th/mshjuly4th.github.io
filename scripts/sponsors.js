@@ -1,21 +1,41 @@
 var addSponsor = function(level, name, sponsor) {
-	if (level == "bronze") {
+	let nLevel;
+	switch (level) {
+		case "bronze":
+			nLevel = 0;
+			break;
+		case "silver":
+			nLevel = 1;
+			break;
+		case "gold":
+			nLevel = 2;
+			break;
+		case "platinum":
+			nLevel = 3;
+			break;
+		default:
+			alert("Sponsor level was not recognized... Please contact the developer.");
+			break;
+	}
+	if (nLevel == 0) {
 		$("#bronzecontainer").append((document.getElementById("bronzecontainer").innerHTML == "" ? "" : "<br>") + sponsor.label);
 	} else {
 		$("#" + level).after("\
-			<a class=\"sponsor\" id=\"" + name + "\" href=\"" + sponsor.link + "\">\
+			<a class=\"sponsor\" id=\"" + name + (nLevel >= 2 ? "\" href=\"" + sponsor.link + "\" target=\"_blank" : "") + "\" draggable=\"false\" style=\"-moz-user-select: none;\" ondragstart=\"return false;\">\
 				<img class=\"loading sponsorload\" src=\"images/loading.png\" />\
 				<img class=\"sponsorimg\" />\
-				<div class=\"sponsorinfo\">" + sponsor.label + "</div>\
+				<div class=\"sponsorinfo\">" + sponsor.label + (nLevel >= 2 ? "<br><br>Contact us!<br>" + sponsor.contact + (nLevel == 3 ? "<br>" + sponsor.blurb : "") : "") + "</div>\
 			</a>\
 		");
-		$("#" + name + " .sponsorimg")[0].addEventListener('load', function() {
+		let currSponsorImg = $("#" + name + " .sponsorimg")[0];
+		// currSponsorImg.draggable = false;
+		currSponsorImg.addEventListener('load', function() {
 			$("#" + name + " .loading").fadeOut();
 			$("#" + name + " .sponsorimg").css("opacity", 1);
 			$("#" + name).css("width", "auto");
 		});
 		firebase.storage().ref("sponsors/" + sponsor.image).getDownloadURL().then(function(url) {
-			$("#" + name + " .sponsorimg")[0].src = url;
+			currSponsorImg.src = url;
 		});
 	}
 }

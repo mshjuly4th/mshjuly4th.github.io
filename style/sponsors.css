@@ -74,7 +74,7 @@ html, body {
 #bronze ~ .sponsor {
 	box-shadow: #d6b326 0 0 10px 1px;
 }*/
-.sponsor:hover {
+.sponsor[href]:hover {
 	cursor: pointer;
 }
 .sponsorload {
@@ -106,6 +106,7 @@ html, body {
 	position: absolute;
 	transition: height 0.5s;
 	font-size: 1.5em;
+	/*pointer-events: none;*/
 }
 .sponsor:hover .sponsorinfo {
 	height: 100%;
