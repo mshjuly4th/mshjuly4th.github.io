@@ -59,6 +59,7 @@ html, body {
 	margin: 1vh;
 	text-decoration: none;
 	color: black;
+	overflow: hidden;
 	/*transition: width 3s; DOESN'T WORK*/
 }
 /*Removed for aesthetics
@@ -91,7 +92,7 @@ html, body {
 	/*clear: both;*/
 	/*position: relative;*/
 	opacity: 0;
-	transition: opacity 1s;
+	transition: opacity 1s, filter 0.5s;
 }
 .sponsorinfo {
 	display: flex;
@@ -110,6 +111,9 @@ html, body {
 }
 .sponsor:hover .sponsorinfo {
 	height: 100%;
+}
+.sponsor:hover .sponsorimg {
+	filter: blur(10px);
 }
 #bronzecontainer {
 	margin-top: 1vh;
