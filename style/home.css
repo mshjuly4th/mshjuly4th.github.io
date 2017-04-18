@@ -65,6 +65,11 @@
 	margin: 0 auto;
 	left: 0;
 	right: 0;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 	/*border-radius: 10%; unnecessary because of hidden overflow*/
 	/*background-color: white;*/
 }

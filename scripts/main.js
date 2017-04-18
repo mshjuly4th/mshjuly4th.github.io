@@ -1,3 +1,7 @@
+//Taken from http://javascript.about.com/od/problemsolving/a/modulobug.htm - Why? Because JavaScript.
+Number.prototype.mod = function(n) {
+	return ((this%n)+n)%n;
+}
 var shadow, fullLogo;
 //Debouncing function taken from Underscore.js
 function debounce(func, wait, immediate) {
