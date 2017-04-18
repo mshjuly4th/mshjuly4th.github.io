@@ -122,17 +122,16 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: background-color 0.5s; /*why doesn't this work?*/
 	/*padding: 3.33vw;*/
 	/*filter: blur(5px);*/
 }
 #leftslidearrow-container {
 	left: -10vw;
-	transition: left 0.5s;
+	transition: left 0.5s, background-color 0.25s;
 }
 #rightslidearrow-container {
 	right: -10vw;
-	transition: right 0.5s;
+	transition: right 0.5s, background-color 0.25s;
 }
 #slidecontainer:hover #leftslidearrow-container {
 	left: 0;
@@ -142,7 +141,7 @@
 }
 .slidearrow-container:hover {
 	cursor: pointer;
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.75);
 }
 .slidearrow {
 	position: absolute;
