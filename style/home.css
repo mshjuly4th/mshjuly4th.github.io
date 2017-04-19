@@ -3,6 +3,8 @@
 	width: 100%;
 	height: auto;
 	border-bottom: 2px solid #EBEBEB;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
 }
 .stat {
 	width: auto !important;
