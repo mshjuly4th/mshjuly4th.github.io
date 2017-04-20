@@ -1,10 +1,16 @@
 /*body { width: auto; overflow: visible;}*/
-#fulllogo {
-	width: 100%;
-	height: auto;
+#fulllogo-container {
+	height: 10vh;
+	min-height: 50px;
+	width: auto;
+	text-align: center;
 	border-bottom: 2px solid #EBEBEB;
 	padding-top: 1vh;
 	padding-bottom: 1vh;
+}
+#fulllogo {
+	height: 100%;
+	width: auto;
 }
 .stat {
 	width: auto !important;
