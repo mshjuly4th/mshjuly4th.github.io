@@ -1,0 +1,20 @@
+#faq-container {
+	margin-left: 5vw;
+	margin-right: 10vw;
+}
+#faq-container, #faq-container ul {
+	list-style-type: none;
+}
+.question {
+	font-size: 2em;
+}
+.answer {
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	font-size: 0.75em;
+}
+/*#faq-container > * {
+	text-align: center;
+}*/
