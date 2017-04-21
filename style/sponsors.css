@@ -107,6 +107,8 @@ html, body {
 	position: absolute;
 	transition: height 0.5s;
 	font-size: 1.5em;
+	margin: auto;
+	padding: auto;
 	/*pointer-events: none;*/
 }
 .sponsor:hover .sponsorinfo {

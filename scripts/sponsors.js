@@ -24,7 +24,7 @@ var addSponsor = function(level, name, sponsor) {
 			<a class=\"sponsor\" id=\"" + name + (nLevel >= 2 ? "\" href=\"" + sponsor.link + "\" target=\"_blank" : "") + "\" draggable=\"false\" style=\"-moz-user-select: none;\" ondragstart=\"return false;\">\
 				<img class=\"loading sponsorload\" src=\"images/loading.png\" />\
 				<img class=\"sponsorimg\" />\
-				<div class=\"sponsorinfo\">" + sponsor.label + (nLevel >= 2 ? "<br><br>Contact us!<br>" + sponsor.contact + (nLevel == 3 ? "<br>" + sponsor.blurb : "") : "") + "</div>\
+				<div class=\"sponsorinfo\"><span></span>" + sponsor.label + (nLevel >= 2 ? "<br>Contact us!<br>" + sponsor.contact + (nLevel == 3 ? "<br>" + sponsor.blurb : "") : "") + "<span></span></div>\
 			</a>\
 		");
 		let currSponsorImg = $("#" + name + " .sponsorimg")[0];
