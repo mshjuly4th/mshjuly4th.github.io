@@ -25,8 +25,9 @@
 }
 #slideshow-container {
 	clear: both;
-	margin-top: 2vw;
-	margin-bottom: 2vw;
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+	border-bottom: 2px solid #EBEBEB; /*When the slideshow is moved off, replace it with info of the same size*/
 }
 #slideshow {
 	height: 40vw;
