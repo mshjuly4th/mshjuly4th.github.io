@@ -33,6 +33,7 @@
 	display: inline-block;
 	float: left;
 	list-style-type: none;
+	will-change: transform;
 	transition: transform 1s;
 }
 #slide > li {
@@ -120,10 +121,12 @@
 }
 #leftslidearrow-container {
 	left: -10vw;
+	will-change: left;
 	transition: left 0.5s, background-color 0.25s;
 }
 #rightslidearrow-container {
 	right: -10vw;
+	will-change: left;
 	transition: right 0.5s, background-color 0.25s;
 }
 #slidecontainer:hover #leftslidearrow-container {
