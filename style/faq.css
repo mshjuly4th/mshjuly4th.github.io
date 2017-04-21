@@ -1,6 +1,7 @@
 #faq-container {
 	margin-left: 5vw;
 	margin-right: 10vw;
+	min-height: 50vh;
 }
 #faq-container, #faq-container ul {
 	list-style-type: none;
@@ -15,6 +16,13 @@
 	padding-right: 5vw;
 	font-size: 0.75em;
 }
+/*#faqload {
+	height: 5vw;
+	width: 5vw;
+	top: 50%;
+	left: 50%;
+	margin: -2.5vw 0 0 -2.5vw;
+}*/
 /*#faq-container > * {
 	text-align: center;
 }*/
