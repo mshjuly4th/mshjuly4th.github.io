@@ -41,6 +41,24 @@
 	margin-top: 2vh;
 	margin-bottom: 2vh;
 }
+#schedule-container {
+	width: 100%;
+	height: auto;
+	overflow-x: auto;
+}
+#schedule {
+	/*width: 75%;*/
+	max-width: 50%;
+	border-collapse: collapse;
+}
+#schedule td:nth-child(2) {
+	white-space: nowrap;
+	word-break: none;
+}
+#schedule td, #schedule th {
+	border: 1px solid black;
+	width: auto;
+}
 /*@media all and (orientation: portrait) {
 	.slidearrow-container {
 		background-color: red;
