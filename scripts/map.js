@@ -50,4 +50,6 @@ if (typeof eventDetails == "undefined") {
 		if (typeof map != 'undefined') markMap();
 		else markMapReady = true; //wait for map
 	});
+} else {
+	markMapReady = true;
 }
