@@ -5,6 +5,19 @@
 		<link href="https://fonts.googleapis.com/css?family=Poppins|Open+Sans" rel="stylesheet">
 		<link rel="stylesheet" href="style/main.css" />
 		<link rel="stylesheet" href="style/home.css" />
+		<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyD3jnYyN4pd2NN_XSnE0L4DfGKRpAC22vs",
+		    authDomain: "msh-july-4th.firebaseapp.com",
+		    databaseURL: "https://msh-july-4th.firebaseio.com",
+		    projectId: "msh-july-4th",
+		    storageBucket: "msh-july-4th.appspot.com",
+		    messagingSenderId: "1096224286224"
+		  };
+		  firebase.initializeApp(config);
+		</script>
 		<script type='text/javascript' src='scripts/jquery-3.1.1.min.js'></script>
 		<script type='text/javascript'>
 			homePage = true;
@@ -25,6 +38,30 @@
 			<a href="http://donate.mshjuly4th.com" target="_blank" class="navlink">Donate<br><div class="navhighlight"></div></a>
 		</div>
 		<div id="spacer" class="invis"></div>
+		<center>
+			<div id="maininfo">
+				<h2>The Millburn-Short Hills Fourth of July Committee</h2>
+				<!-- <br> -->
+				is proud to present...
+				<!-- <br> -->
+				<h1>MSH July 4th Celebrations!</h1>
+			</div>
+			<hr>
+			<h1>Where will it be located?</h1>
+			<hr>
+			<h3 style="margin: auto">The festivities will occur at:</h3>
+			<br>
+			<div style="text-align: left; display: inline-block;">
+				<ul style="margin: auto;">
+					<li>Taylor Park, Main St, Millburn, NJ 07041</li>
+					<li>Millburn High School, 462 Millburn Ave, Millburn, NJ 07041</li>
+				</ul>
+			</div>
+			<br>
+			<div id="map"></div>
+			<script type='text/javascript' src='scripts/map.js'></script>
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcXoYC6kTQSKNTvnR6c_F46SDsU-0mCIE&callback=initMap"></script>
+		</center>
 		<footer>
 			<hr>
 			<center>
