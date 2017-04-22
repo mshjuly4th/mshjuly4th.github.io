@@ -48,7 +48,7 @@
 }
 #schedule {
 	/*width: 75%;*/
-	max-width: 50%;
+	max-width: 75%;
 	border-collapse: collapse;
 }
 #schedule td:nth-child(2), #schedule td:nth-child(3) {
