@@ -71,8 +71,9 @@
 	padding-right: 1vw;
 }
 #schedule td, #schedule th {
-	border: 1px solid black;
+	border: 1px solid #ADADAD;
 	width: auto;
+	padding: 1.5em;
 }
 /*@media all and (orientation: portrait) {
 	.slidearrow-container {
