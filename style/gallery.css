@@ -18,6 +18,9 @@
 	-ms-flex-flow: column;
 	    flex-flow: column;
 	-webkit-transition: width 1s;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	transition: width 1s;
 }
 #slidecontainer {
