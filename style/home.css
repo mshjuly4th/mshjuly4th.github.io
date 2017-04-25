@@ -66,7 +66,6 @@
 #schedule td:nth-child(2), #schedule td:nth-child(3) {
 	white-space: nowrap;
 	word-break: none;
-	text-align: center;
 	padding-left: 1vw;
 	padding-right: 1vw;
 }
@@ -74,6 +73,7 @@
 	border: 1px solid #ADADAD;
 	width: auto;
 	padding: 1.5em;
+	text-align: center;
 }
 /*@media all and (orientation: portrait) {
 	.slidearrow-container {

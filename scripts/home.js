@@ -7,9 +7,9 @@ $(document).ready(function() {
 			// console.log(eventDetails.schedule);
 			for (let event of eventDetails.schedule) {
 				$("#schedule > tbody").append("<tr>\
-					<td>" + event.title + " - " + event.description + "</td>\
-					<td>" + event.time + "</td>\
-					<td>" + event.location + "</td>\
+					<td><h2>" + event.title + "</h2>" + event.description + "</td>\
+					<td><h2>" + event.time + "</h2></td>\
+					<td><h2>" + event.location + "</h2></td>\
 					</tr>");
 			}
 		});
