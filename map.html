@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Millburn/Short Hills July 4th Committee | <!--INSERT NAME OF PAGE--></title>
+		<link href="https://fonts.googleapis.com/css?family=Poppins|Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="style/main.css" />
+		<link rel="stylesheet" href="style/map.css" />
+		<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyD3jnYyN4pd2NN_XSnE0L4DfGKRpAC22vs",
+		    authDomain: "msh-july-4th.firebaseapp.com",
+		    databaseURL: "https://msh-july-4th.firebaseio.com",
+		    projectId: "msh-july-4th",
+		    storageBucket: "msh-july-4th.appspot.com",
+		    messagingSenderId: "1096224286224"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+		<script type='text/javascript' src='scripts/jquery-3.1.1.min.js'></script>
+		<script type='text/javascript' src='scripts/main.js'></script>
+	</head>
+	<body>
+		<div id="navbar">
+			<a href="index.html" class="navlink" id="logo-container"><img src="images/logo.png"  id="logo"/></a>
+			<a href="gallery.html" class="navlink">Gallery<br><div class="navhighlight"></div></a>
+			<a href="faq.html" class="navlink">FAQ<br><div class="navhighlight"></div></a>
+			<a href="becomesponsor.html" class="navlink">Become a Sponsor<br><div class="navhighlight"></div></a>
+			<a href="sponsors.html" class="navlink">Sponsors<br><div class="navhighlight"></div></a>
+			<a href="http://donate.mshjuly4th.com" target="_blank" class="navlink">Donate<br><div class="navhighlight"></div></a>
+		</div>
+		<div id="spacer"></div>
+		<div id="map"></div>
+		<script type='text/javascript' src='scripts/map.js'></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcXoYC6kTQSKNTvnR6c_F46SDsU-0mCIE&callback=initMap"></script>
+		<footer>
+			<hr>
+			<center>
+				<p>Contact us! Email: <a href="mailto:info@mshjuly4th.com" target="_blank">info@mshjuly4th.com</a> &bull; Mail: MILLBURN-SHORT HILLS FOURTH OF JULY COMMITTEE INC., P.O. BOX 4, SHORT HILLS, NJ 07078</p>
+				<p style="max-width: 75%">The 4th of July celebration is made possible through your generous donations, our corporate sponsors, ticket sales and the year round efforts of volunteer members of the Millburn Short Hills 4th of July Committee. Thank you, and feel free to donate <a href="http://donate.mshjuly4th.com" target="_blank">here!</a></p>
+				<p>&copy; 2017 David Shustin &bull; Logo by Austin Peng</p>
+			</center>
+		</footer>
+	</body>
+</html>
