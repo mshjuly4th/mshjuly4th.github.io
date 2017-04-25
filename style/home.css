@@ -90,6 +90,7 @@
 	box-shadow: black 0 0 10px 0;
 	font-size: 2em;
 	transition: background-color 0.5s;
+	padding: 2em;
 }
 #golf:hover {
 	background-color: #00DD15;
