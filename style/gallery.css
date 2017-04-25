@@ -6,7 +6,7 @@
 }
 #slideshow {
 	height: 40vw;
-	width: 70vw;
+	width: fit-content;
 	border: 1px solid black;
 	border-radius: 5%;
 	padding: 1vw;
@@ -30,6 +30,7 @@
 	text-align: left;
 	overflow: hidden;
 	border-radius: 5%;
+	/*transition: width 1s;*/
 }
 #slide {
 	height: 100%;

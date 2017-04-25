@@ -1,5 +1,5 @@
 const shadowProp = '0px 1px 20px 0px black';
-const slides = ["images/gallery.jpg", "images/IMG_1239.JPG", "images/IMG_1242.JPG", "images/IMG_9023.JPG", "images/IMG_9035.JPG", "images/IMG_9280.JPG", "images/IMG_7552.JPG", "images/IMG_7535.JPG", "images/IMG_7516.JPG"];
+const slides = ["images/gallery.jpg", "images/4th_of_July_2005_024.jpg", "images/DSC_0083.JPG", "images/IMG_1239.JPG", "images/IMG_9023hq.JPG", "images/DSC_0037.JPG", "images/DSC_0096.JPG", "images/IMG_1242.JPG", "images/IMG_9035.JPG", "images/DSC_0046.JPG", "images/IMG_4803.JPG", "images/IMG_9280.JPG", "images/DSC_0047.JPG", "images/IMG_4868.JPG", "images/DSC_0079.JPG", "images/IMG_7552.JPG"];
 const slideTime = 3000;
 var slidePos = [];
 //var swap = [document.getElementById("swap0"), document.getElementById("swap1")];
@@ -74,7 +74,7 @@ var processImg = function() {
 		// $("li[slide=\"" + i + "\"]").css("left", i == 0 ? 0 : lastLeft + $("img[slide=\"" + i + "\"]")[0].clientWidth);
 		$("li[slide=\"" + n + "\"]").css("left", slidePos[n] + "px");
 	}
-	$("#slideshow").css("width", $("img[slide=\"" + currSlide + "\"]").css("width"));
+	$("#slidecontainer").css("width", $("img[slide=\"" + currSlide + "\"]").css("width"));
 	switchSlide(currSlide); //This is for resizing when the slide has already been switched.
 }
 //This function is just to call both processImg and delete the loading gif
@@ -86,11 +86,12 @@ var initSlideshow = function() {
 	}, slideTime);
 	processImg();
 	$("#slide > li").css("opacity", 1);
+	$("#slidecontainer").css("transition", "width 1s");
 }
 var switchSlide = function(slide) {
 	currSlide = slide;
 	$("#slide").css("transform", "translate(" + -slidePos[currSlide] + "px, 0px)");
-	$("#slideshow").css("width", $("img[slide=\"" + currSlide + "\"]")[0].clientWidth);
+	$("#slidecontainer").css("width", $("img[slide=\"" + currSlide + "\"]")[0].clientWidth);
 	$(".slideselected").removeClass("slideselected");
 	$(".slidepick[slide=\"" + currSlide + "\"]").addClass("slideselected");
 }
