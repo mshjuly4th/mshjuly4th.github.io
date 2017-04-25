@@ -127,6 +127,7 @@ html, body {
 	font-size: 1.5em;
 	margin: auto;
 	padding: auto;
+	will-change: height;
 	/*pointer-events: none;*/
 }
 .sponsor:hover .sponsorinfo {
