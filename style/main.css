@@ -111,6 +111,7 @@ html, body {
 }
 #golfer-container {
 	float: right;
+	right: 0;
 	opacity: 1;
 	-webkit-transition: opacity 0.5s;
 	transition: opacity 0.5s;

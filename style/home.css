@@ -23,6 +23,27 @@
 .invis {
 	display: none;
 }
+#main-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+}
 #maininfo {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -53,6 +74,27 @@
 	margin-bottom: 2vh;
 	padding: 2em;
 	border-radius: 1em;
+}
+.maingolfer-container {
+	position: absolute;
+	/*right: 0;*/
+	height: 12.5vw;
+	width: 12.5vw;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+.maingolfer-container:hover {
+	opacity: 0.8;
+}
+.maingolfer {
+	height: 100%;
+	width: 100%;
+}
+#golfleft {
+	left: 0;
+}
+#golfright {
+	right: 0;
 }
 #schedule-container {
 	width: 100%;
