@@ -28,7 +28,7 @@ var markMap = function() {
 	for (let i = 0; i < locations.length; i++) {
 		places.push({
 			infowindow: new google.maps.InfoWindow({
-				content: "<h1>" + locations[i].title + "</h1><br>" + locations[i].subtitle
+				content: "<center><h1>" + locations[i].title + "</h1><br>" + locations[i].subtitle + "</center"
 			}),
 			marker: new google.maps.Marker({
 				position: locations[i].position,
