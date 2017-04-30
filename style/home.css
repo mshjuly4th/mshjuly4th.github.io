@@ -37,12 +37,11 @@
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
+	position: relative;
 	height: -webkit-fit-content;
 	height: -moz-fit-content;
 	height: fit-content;
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
+	width: 100%;
 }
 #maininfo {
 	display: -webkit-box;
@@ -77,6 +76,8 @@
 }
 .maingolfer-container {
 	position: absolute;
+	top: 50%;
+	margin-top: -6.25vw;
 	/*right: 0;*/
 	height: 12.5vw;
 	width: 12.5vw;

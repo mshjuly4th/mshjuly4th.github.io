@@ -5,7 +5,8 @@ $(document).ready(function() {
 		ref.once("value").then(function(ds) {
 			eventDetails = ds.val();
 			// console.log(eventDetails.schedule);
-			for (let event of eventDetails.schedule) {
+			for (let i = 0; i < eventDetails.schedule.length; i++) {
+				let event = eventDetails.schedule[i];
 				$("#schedule > tbody").append("<tr>\
 					<td><h2>" + event.title + "</h2>" + event.description + "</td>\
 					<td><h2>" + event.time + "</h2></td>\
