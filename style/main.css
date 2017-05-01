@@ -121,7 +121,7 @@ html, body {
 	color: black;*/
 }
 #golfer {
-	margin-left: 1em;
+	/*margin-left: 1em;*/
 }
 #golfer-container:hover {
 	opacity: 0.8;
