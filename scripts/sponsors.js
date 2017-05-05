@@ -33,6 +33,12 @@ var addSponsor = function(level, name, sponsor) {
 			$("#" + name + " .loading").fadeOut();
 			$("#" + name + " .sponsorimg").css("opacity", 1);
 			$("#" + name).css("width", "auto");
+			let sponsors = $(".sponsor");
+			for (let i = 0; i < sponsors.length; i++) {
+				$(sponsors[i]).css("height", "40vh");
+				// setTimeout(300);
+				$(sponsors[i]).css("height", $(sponsors[i]).find(".sponsorimg").height());
+			}
 		});
 		firebase.storage().ref("sponsors/" + sponsor.image).getDownloadURL().then(function(url) {
 			currSponsorImg.src = url;
@@ -41,6 +47,14 @@ var addSponsor = function(level, name, sponsor) {
 }
 $(document).ready(function() {
 	// addSponsor("MSH July 4th - Dynamic", "http://test.mshjuly4th.com", "images/TRGlogo.png");
+	$(window).resize(function() {
+		let sponsors = $(".sponsor");
+		for (let i = 0; i < sponsors.length; i++) {
+			$(sponsors[i]).css("height", "40vh");
+			// setTimeout(300);
+			$(sponsors[i]).css("height", $(sponsors[i]).find(".sponsorimg").height());
+		}
+	});
 	var ref = firebase.database().ref("sponsors");
 	ref.once("value").then(function(ds) {
 		var data = ds.val();
