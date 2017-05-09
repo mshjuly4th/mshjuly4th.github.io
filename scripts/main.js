@@ -41,13 +41,13 @@ var navControlHome = function(currScroll) {
 	if (change && currScroll - fullLogoHeight <= 0) {
 		$("#navbar").addClass("stat");
 		$("#spacer").addClass("invis");
-		$("#twitter").addClass("statmedia");
-		$("#facebook").addClass("statmedia");
+		// $("#twitter").addClass("statmedia");
+		// $("#facebook").addClass("statmedia");
 	} else if (change && currScroll - fullLogoHeight > 0) {
 		$("#navbar").removeClass("stat");
 		$("#spacer").removeClass("invis");
-		$("#twitter").removeClass("statmedia");
-		$("#facebook").removeClass("statmedia");
+		// $("#twitter").removeClass("statmedia");
+		// $("#facebook").removeClass("statmedia");
 	}
 }
 $(document).ready(function() {
