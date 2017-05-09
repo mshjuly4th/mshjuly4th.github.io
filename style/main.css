@@ -23,7 +23,7 @@ html, body {
 	height: 100%;
 }*/
 #logo-container {
-	overflow: visible;
+	overflow: hidden;
 	-webkit-transition: background 0.5s;
 	transition: background 0.5s;
 }
