@@ -119,8 +119,11 @@
 	padding: 1.5em;
 	text-align: center;
 }
-/*@media all and (orientation: portrait) {
-	.slidearrow-container {
-		background-color: red;
+#mainapplink {
+	display: none;
+}
+@media screen and (orientation: portrait) {
+	#mainapplink {
+		display: block;
 	}
-}*/
+}
