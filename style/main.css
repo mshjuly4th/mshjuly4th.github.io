@@ -17,7 +17,7 @@ html, body {
 	left: 0px;
 	-webkit-transition: box-shadow 0.25s;
 	transition: box-shadow 0.25s;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 /*#navbar > * {
 	height: 100%;
@@ -106,12 +106,38 @@ html, body {
 	width: 75%;
 	height: 10%;
 }
-#socialmedia {
+/*#socialmedia {
 	float: right;
 }
 #socialmedia a {
 	text-decoration: none;
 	color: black;
+}*/
+#facebook, #twitter {
+	position: absolute;
+	right: 0;
+	height: 3em;
+	/*border: 1px solid black;*/
+	will-change: opacity;
+	transition: opacity 0.25s;
+	opacity: 1;
+}
+#facebook:hover, #twitter:hover {
+	opacity: 0.8;
+}
+#facebook {
+	bottom: -3em;
+}
+#twitter {
+	bottom: -6em;
+}
+.statmedia {
+	position: static !important;
+	float: right !important;
+}
+#facebook img, #twitter img {
+	height: 100%;
+	width: auto;
 }
 #golfer-container, #golfer {
 	height: 100%;
