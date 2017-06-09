@@ -14,7 +14,7 @@ var addSponsor = function(level, name, sponsor) {
 			nLevel = 3;
 			break;
 		default:
-			alert("Sponsor level was not recognized... Please contact the developer.");
+			console.log("Sponsor level was not recognized... Please contact the developer.");
 			break;
 	}
 	if (nLevel == 0) {
