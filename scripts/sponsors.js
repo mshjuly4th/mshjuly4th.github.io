@@ -33,6 +33,7 @@ var addSponsor = function(level, name, sponsor) {
 			$("#" + name + " .loading").fadeOut();
 			$("#" + name + " .sponsorimg").css("opacity", 1);
 			$("#" + name).css("width", "auto");
+			$("#" + name).css("height", "auto");
 			// let sponsors = $(".sponsor");
 			// for (let i = 0; i < sponsors.length; i++) {
 			// 	$(sponsors[i]).css("height", "40vh");
