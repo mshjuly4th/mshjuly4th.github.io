@@ -1,4 +1,28 @@
 /*body { width: auto; overflow: visible;}*/
+/* Delete the following to delete the 2020 changes */
+#maininfo {
+	display: none !important;
+}
+/* Kinda hacky way to handle mobile vs desktop but hey, it works! */
+@media screen and (orientation: landscape) {
+	.poster2020 {
+		height: 75vh;
+		position: relative;
+	}
+	.poster2020:hover {
+		height: auto;
+		width: 75%;
+	}
+}
+@media screen and (orientation: portrait) {
+	.poster2020 {
+		max-width: 90%;
+		max-height: 75vh;
+	}
+}
+
+/* End 2020 changes */
+
 #fulllogo-container {
 	max-width: 100vw;
 	height: 10vh;
