@@ -1,5 +1,5 @@
 /*body { width: auto; overflow: visible;}*/
-/* Delete the following to delete the 2020 changes */
+/* Future Paul: Delete the following to delete the 2020 changes */
 #maininfo {
 	display: none !important;
 }
@@ -13,12 +13,20 @@
 		height: auto;
 		width: 75%;
 	}
+	.map2020 {
+		width: 75%;
+		margin-top: 16px;
+	}
 }
 @media screen and (orientation: portrait) {
 	.poster2020 {
 		max-width: 90%;
 		max-height: 75vh;
 	}
+	.map2020 {
+		margin-top: 16px;
+		 width: 90%;
+	 }
 }
 
 /* End 2020 changes */
